@@ -1,4 +1,6 @@
-A printf project.
+A printf project on C. 
 
 
-the main objective of this work is to write our own printf in c programming.
+The main objective of this work is to create our own printf in C programming.
+
+It contains a 16 projects on how to create a printf function.
