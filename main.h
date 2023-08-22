@@ -14,7 +14,7 @@
 #define F_HASH 8
 #define F_SPACE 16
 
-/* SIZE */
+/* SIZES */
 #define S_LONG 2
 #define S_SHORT 1
 
@@ -27,8 +27,7 @@
 struct fmt
 {
 	char fmt;
-	int (*fn)(va_list, char[],
-			int, int, int, int);
+	int (*fn)(va_list, char[], int, int, int, int);
 };
 
 
@@ -37,12 +36,11 @@ struct fmt
  * @fmt: The format.
  * @fmt_t: The format associated
  */
-typedef struct fmt fmt_t
+typedef struct fmt fmt_t;
 
 int _printf(const char *format, ...);
 int handle_print(const char *fmt, int *i,
-		var_list list, char buffer[],
-		int flags, int width, int precision, int size);
+		var_list list, char buffer[], int flags, int width, int precision, int size);
 
 /****************FUNCTION***************/
 
