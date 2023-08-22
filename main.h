@@ -33,6 +33,8 @@ struct fmt
 	int (*fn)(va_list, char[], int, int, int, int);
 };
 =======
+#include <stddef.h>
+#include <stdlib.h>
 >>>>>>> ee5727a8b91b7f569b8a2f54c52f73108b807085
 
 int _putchar(char c);
