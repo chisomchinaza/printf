@@ -1,6 +1,9 @@
 #ifndef MAIN_H
 #define MAIN_H
+#include  <stdio.h>
+#include <limits.h>
 #include <stdarg.h>
+<<<<<<< HEAD
 #include <stdio.h>
 #include <unistd.h>
 
@@ -29,13 +32,31 @@ struct fmt
 	char fmt;
 	int (*fn)(va_list, char[], int, int, int, int);
 };
+=======
+>>>>>>> ee5727a8b91b7f569b8a2f54c52f73108b807085
 
+int _putchar(char c);
+int print_int(va_list arg);
+int print_unsigned(va_list arg);
+int _printf(const char *format, ...);
+int print_char(va_list arg);
+int print_str(va_list arg);
+int print_percent(void);
+void print_binary(unsigned int n, unsigned int *printed);
+int print_unsignedToBinary(va_list arg);
+int print_oct(va_list arg);
+int print_unsignedIntToHex(unsigned int num, char _case);
+int print_hex_base(va_list arg, char _case);
+int print_hex(va_list arg);
+int print_HEX(va_list arg);
+int print_STR(va_list arg);
 
 /**
- * typedef struct fmt fmt_t - Struct op
- * @fmt: The format.
- * @fmt_t: The format associated
+ * struct identifierStruct - structure definition of a printTypeStruct
+ * @indentifier: type
+ * @printer: function to print
  */
+<<<<<<< HEAD
 typedef struct fmt fmt_t;
 
 int _printf(const char *format, ...);
@@ -109,5 +130,12 @@ int is_digit(char);
 
 long int convert_size_number(long int num, int size);
 long int convert_size_ unsgnd(unsigned long int num, int size);
+=======
+typedef struct identifierStruct
+{
+char *indentifier;
+int (*printer)(va_list);
+} identifierStruct;
+>>>>>>> ee5727a8b91b7f569b8a2f54c52f73108b807085
 
-#endif /* MAIN_H */
+#endif
